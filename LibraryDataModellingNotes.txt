@@ -1,0 +1,6 @@
+Library Domain model Notes
+
+Book (BookGenre, Title, publisher, Author, YearPublished)
+Genre (enum) Horror, Fantasy, Romance etc...
+
+(ToBeMocked)BookPlacement - ColumnNum, Genre 
