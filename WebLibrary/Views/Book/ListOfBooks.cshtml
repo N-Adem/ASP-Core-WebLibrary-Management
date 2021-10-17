@@ -1,15 +1,19 @@
-﻿@model IEnumerable<WebLibrary.Models.Book>
+﻿@model BooksListViewModel
 @{
     ViewData["Title"] = "ListOfBooks";
 }
 
 <h1>ListOfBooks</h1>
 
-@foreach (var book in Model) 
+@foreach (var book in Model.Books)
 {
 <div>
+    <h1>@book.BookGenre</h1>
     <h1>@book.BookId</h1>
-    <h1>@book.Title</h1>
 </div>
 }
+
+
+
+
 
