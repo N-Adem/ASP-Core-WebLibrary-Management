@@ -7,6 +7,7 @@ namespace WebLibrary.Models
 {
     public class BookPlacement
     {
+        public int Id { get; set; }
         public int ColumnNum { get; set; }
         public Genre BookGenre {get; set;}
     }

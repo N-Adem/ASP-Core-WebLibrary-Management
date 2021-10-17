@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebLibrary.Models;
+using WebLibrary.ViewModels;
 
 namespace WebLibrary.Controllers
 {
@@ -21,7 +22,11 @@ namespace WebLibrary.Controllers
         // Returning a view
         public ViewResult ListOfBooks() 
         {
-            return View(_bookrepository.AllBooks);
+            BooksListViewModel bookListViewModel = new BooksListViewModel();
+            bookListViewModel.Books = _bookrepository.AllBooks;
+
+            bookListViewModel.currentGenre = Genre.Fantasy;
+            return View(bookListViewModel);
         }
    
     }
